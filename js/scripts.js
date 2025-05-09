@@ -1,0 +1,41 @@
+//querySelector
+
+const heading = document.querySelector('#heading') //retorna 0 o 1 elemento
+// heading.textContent = 'Aprendiendo JS'
+heading.classList = 'nueva_clase'
+
+
+//querySelectorAll
+
+// const enlaces = document.querySelectorAll('.navegacion a') //retorna de 0 a todos los que concuerden con el selector
+//console.log(enlaces);
+// enlaces[0].textContent = 'Nuevo Enlace' //Cambia el contenido del elemento
+// enlaces[0].href = 'https://google.com' //Se le cambia el destino del enlace
+// enlaces[0].classList.add('nueva_clase') //Agrega una clase al elemento
+// enlaces[0].classList.remove('navegacion__enlace') //Elimina una clase del elemento
+
+//getElementById
+
+const heading2 = document.getElementById('heading')
+console.log(heading2)
+
+// Generar un nuevo enlace
+
+const nuevoEnlace = document.createElement('A')
+
+// Agregamos el href del nuevo enlace
+
+nuevoEnlace.href = 'nuevo-enlace.html';
+
+// Agregamos el texto que muestra el enlace
+
+nuevoEnlace.textContent = 'Tienda Virtual';
+
+// Agregamos la clase
+
+nuevoEnlace.classList.add('navegacion__enlace');
+
+// Agregamos el enlace para que aparezca en la pagina web o documento
+
+const navegacion = document.querySelector('.navegacion');
+navegacion.appendChild(nuevoEnlace);
