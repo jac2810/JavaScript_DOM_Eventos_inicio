@@ -39,3 +39,36 @@ nuevoEnlace.classList.add('navegacion__enlace');
 
 const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
+
+//eventos
+
+console.log(1);
+
+
+window.addEventListener('load', function(){ //load espera que el JS y los archivos que dependen del HTML esten listos
+    console.log(2);
+})
+
+window.onload = function(){
+    console.log(3);
+}
+
+document.addEventListener('DOMContentLoaded', function(){ //Solo espera por el HTML, no por CSS o imagenes
+    console.log(4);
+})
+
+
+console.log(5);
+
+window.onscroll = function(){
+    console.log('scroling...')
+
+    //Seleccionar elementos y asociarle un evento
+
+    const btnEnviar = document.querySelector('.boton--primario')
+    btnEnviar.addEventListener('click', function(e){ //se registra el evento dentro del parametro de la funcion
+        console.log(e);
+        e.preventDefault(); //Evita que el evento haga su accion por defecto (en este caso enviar el formulario)
+        console.log('enviando formulario')
+    })
+}
